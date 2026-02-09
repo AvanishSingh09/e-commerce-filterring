@@ -2,9 +2,12 @@ import React from 'react'
 
 const Recommend = () => {
   return (
-    <div>
-      Recommended
-    </div>
+   <>
+   <div>
+    <h2>Recommended</h2>
+    
+   </div>
+   </>
   )
 }
 
