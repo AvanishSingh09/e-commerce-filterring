@@ -13,5 +13,4 @@ const Colors = () => {
     </div>
   )
 }
-
 export default Colors
