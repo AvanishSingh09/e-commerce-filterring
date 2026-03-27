@@ -1,17 +1,44 @@
 import React from 'react'
 import './Category.css';
 import Input from '../../components/Input.jsx'
-const Category = () => {
+const Category = ({handlechange}) => {
   return (
     <div>
-      <h2 className="sidebar-title-category">Category</h2>
-      <Input />
-      <Input />
-      <Input />
-      <Input />
-      <Input />
+      <h2 className="sidebar-title">Category</h2>
+       <div>
+         <Input
+        handlechange={handlechange}
+        value=""
+        title="All"
+        name="test"
+        />
+        <Input
+        handlechange={handlechange}
+        value="sneakers"
+        title="Sneakers"
+        name="test"
+        />
+        <Input
+        handlechange={handlechange}
+        value="flats"
+        title="Flats"
+        name="test"
+        />
+        <Input
+        handlechange={handlechange}
+        value="heels"
+        title="Heels"
+        name="test"
+        />
+        <Input
+        handlechange={handlechange}
+        value="sandals"
+        title="Sandals"
+        name="test"
+        />
+        </div>
     </div>
-  )
+  );
 }
 
 export default Category

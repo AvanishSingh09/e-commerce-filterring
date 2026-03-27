@@ -4,6 +4,7 @@ import Products from './Products/Products.jsx'
 import Recommend from './Recommended/Recommend.jsx'
 import Sidebar from './Sidebar/Sidebar.jsx'
 import products from './db/data.jsx';
+import Card from './components/Card.jsx'
 function App() {
      const [selectedCategory,setSelectedCategory]=useState(null);
      const [query,setQuery]=useState("");
@@ -33,19 +34,20 @@ function App() {
           <Card key={Math.random()}
           img={img}
           title={title}
-          star={star}
+          star={star} 
           reviews={reviews}
           newPrice={newPrice}
           prevPrice={prevPrice}
           />
       ));
     }
+    const result=filtereddata(products,selectedCategory,query);
       return (
         <>
-    <Sidebar />
-    <Nav />
-    <Recommend />
-    <Products />
+    <Sidebar handlechange={handlechange}/>
+    <Nav  query={query}handlechange={handlechange}/>
+    <Recommend handleClick={handleClick}/>
+    <Products result={result}/>
     </>
   )
 }

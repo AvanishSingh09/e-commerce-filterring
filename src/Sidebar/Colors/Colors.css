@@ -4,3 +4,12 @@
 .all{
     background: linear-gradient(blue,crimson);
 }
+.sidebar-color-title {
+  margin-bottom: 10px;
+}
+
+.sidebar-label-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 7px;
+}
