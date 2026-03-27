@@ -11,8 +11,9 @@ function App() {
      //input filter
      const handleinputchange=event=>{
       setQuery(event.target.value)
-   }
-   const filteredItems=products.filter(product=>product.title.toLocaleLowerCase().indexOf(query.toLocaleLowerCase()!==-1)
+    }
+   const filteredItems=products.filter((product=>product.title.toLocaleLowerCase().indexOf(query.toLocaleLowerCase())!==
+   -1)
   );
   //radio filter
     const handlechange = event => {
@@ -45,7 +46,7 @@ function App() {
       return (
         <>
     <Sidebar handlechange={handlechange}/>
-    <Nav  query={query}handlechange={handlechange}/>
+    <Nav  query={query} handleinputchange={handleinputchange}/>
     <Recommend handleClick={handleClick}/>
     <Products result={result}/>
     </>
